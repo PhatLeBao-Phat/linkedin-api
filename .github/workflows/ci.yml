@@ -11,7 +11,7 @@ on:
 jobs:
 # This is the name of the job
   build:
-    runs-on: ubuntu-latest
+    runs-on:	windows-latest
     strategy:
       fail-fast: false
       matrix:
