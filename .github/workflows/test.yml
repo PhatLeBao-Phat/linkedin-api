@@ -1,0 +1,25 @@
+name: Just-testing 
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  # Name of the job 
+  test1:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false 
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Echo something 
+      run: echo "Hello, this is a simple echo message!"
