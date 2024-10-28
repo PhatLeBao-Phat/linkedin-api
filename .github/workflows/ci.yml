@@ -9,6 +9,7 @@ on:
     branches: [ "main" ]
 
 jobs:
+# This is the name of the job
   build:
     runs-on: ubuntu-latest
     strategy:
